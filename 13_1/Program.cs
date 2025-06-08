@@ -10,14 +10,29 @@ namespace _13_1
         static void Main(string[] args)
         {
             int[] arr = Creator(10);
-            Console.WriteLine("-Тест 1 - УДВОЕНИЕ\nВходной массив:");
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("Тест 1 - УДВОЕНИЕ\n\nВходной массив:");
             Printer(arr);
             int[] newarr = Transform(arr, Doubler);
             Console.WriteLine("Выходной массив:");
             Printer(newarr);
 
+            int[] arr2 = Creator(10);
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("Тест 2 - ВОЗВЕДЕНИЕ В КВАДРАТ\n\nВходной массив:");
+            Printer(arr2);
+            int[] newarr2 = Transform(arr2, Squarer);
+            Console.WriteLine("Выходной массив:");
+            Printer(newarr2);
 
-
+            int[] arr3 = Creator(10);
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("Тест 3 - ЗАМЕНА ЧИСЕЛ НА ИХ МОДУЛИ\n\nВходной массив:");
+            Printer(arr3);
+            int[] newarr3 = Transform(arr3, Moduler);
+            Console.WriteLine("Выходной массив:");
+            Printer(newarr3);
+            Console.WriteLine("-----------------------------------------------\n");
 
 
 

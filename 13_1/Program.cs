@@ -10,7 +10,7 @@ namespace _13_1
         static void Main(string[] args)
         {
             int[] arr = Creator(10);
-            Perebivka();
+            Perebivka(60);
             Console.WriteLine("Тест 1 - УДВОЕНИЕ\n\nВходной массив:");
             Printer(arr);
             int[] newarr = Transform(arr, Doubler);
@@ -18,7 +18,7 @@ namespace _13_1
             Printer(newarr);
 
             int[] arr2 = Creator(10);
-            Perebivka();
+            Perebivka(60);
             Console.WriteLine("Тест 2 - ВОЗВЕДЕНИЕ В КВАДРАТ\n\nВходной массив:");
             Printer(arr2);
             int[] newarr2 = Transform(arr2, Squarer);
@@ -26,13 +26,13 @@ namespace _13_1
             Printer(newarr2);
 
             int[] arr3 = Creator(10);
-            Perebivka();
+            Perebivka(60);
             Console.WriteLine("Тест 3 - ЗАМЕНА ЧИСЕЛ НА ИХ МОДУЛИ\n\nВходной массив:");
             Printer(arr3);
             int[] newarr3 = Transform(arr3, Moduler);
             Console.WriteLine("Выходной массив:");
             Printer(newarr3);
-            Perebivka();
+            Perebivka(60);
 
 
 
@@ -85,9 +85,9 @@ namespace _13_1
             }
             Console.WriteLine("\n");
         }
-        static void Perebivka()
+        static void Perebivka(int a)
         {
-            Console.WriteLine(new string('-', 60));
+            Console.WriteLine(new string('-', a));
         }
 
     }

@@ -87,7 +87,8 @@ namespace _13_1
         }
         static void Perebivka()
         {
-            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine(new string('-', 60));
         }
+
     }
 }

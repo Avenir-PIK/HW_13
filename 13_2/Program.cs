@@ -11,7 +11,7 @@ namespace _13_2
 
             myHome.MyDelegate += (string time, string device, string status) =>
             {
-                Console.WriteLine($"{time} {device} {status}");
+                Console.WriteLine($"[{time}] {device} : {status}");
             };
 
             try { myHome.SetTemperature(35); }

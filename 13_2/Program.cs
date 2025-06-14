@@ -1,4 +1,6 @@
-﻿namespace _13_2
+﻿using System;
+
+namespace _13_2
 {
     public delegate void MyDelegate(string time, string device, string status);
     internal class Program
@@ -21,14 +23,11 @@
             myHome.UnlockDoor();
             myHome.LockDoor();
             try { myHome.SetTemperature(-300); }
-            catch (Exception ex) { Console.WriteLine($"Выявлена ошибка: {ex.Message}\n"); }
+            catch (Exception ex) { Console.WriteLine($"Выявлена ошибка: {ex.Message}"); }
             try { myHome.SetTemperature(23); }
-            catch (Exception ex) { Console.WriteLine($"Выявлена ошибка: {ex.Message}\n"); }
-            //Console.WriteLine($"{myHome.sd1.ToString()}");
-            //Console.WriteLine($"{myHome.sd2.ToString()}");
-            //Console.WriteLine($"{myHome.sd3.ToString()}");
+            catch (Exception ex) { Console.WriteLine($"Выявлена ошибка: {ex.Message}"); }
 
-            Console.WriteLine("Press any key...");
+            Console.WriteLine("\nPress any key...");
             Console.ReadKey();
 
         }
@@ -68,11 +67,11 @@
         {
             if (temp < -273)
             {
-                throw new Exception("Какая-то сказочная температура");
+                throw new Exception("Указана какая-то сказочная температура");
             }
             if (temp > 9000)
             {
-                throw new Exception("Какая-то сказочная температура");
+                throw new Exception("Указана какая-то сказочная температура");
             }
 
             sd2.deviceStatus = $"Установлен на {temp} градусов";
